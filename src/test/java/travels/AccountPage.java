@@ -35,36 +35,36 @@ public class AccountPage {
 	@FindBy (css = "a[title='home']")
 	WebElement HOME_BTN;
 	
-	Account(WebDriver driver){
+	AccountPage(WebDriver driver){
 		this.driver = driver;
 		action = new Actions(driver);
 		PageFactory.initElements(driver, this);
 	}
-	public Account clickMyProfile() {
+	public AccountPage clickMyProfile() {
 		PROFILE_LINK.click();
 		return this;
 	}
-	public Account enterAddress1(String address) {
+	public AccountPage enterAddress1(String address) {
 		ADDRESS1_TEXTFIELD.sendKeys(address);
 		return this;
 	}
-	public Account enterAddress2(String address) {
+	public AccountPage enterAddress2(String address) {
 		ADDRESS2_TEXTFIELD.sendKeys(address);
 		return this;
 	}
-	public Account enterCity(String city) {
+	public AccountPage enterCity(String city) {
 		CITY_TEXTFIELD.sendKeys(city);
 		return this;
 	}
-	public Account enterState(String state) {
+	public AccountPage enterState(String state) {
 		STATE_TEXTFIELD.sendKeys(state);
 		return this;
 	}
-	public Account enterZip(String zip) {
+	public AccountPage enterZip(String zip) {
 		ZIP_TEXTFIELD.sendKeys(zip);
 		return this;
 	}
-	public Account selectCountry(String country) {
+	public AccountPage selectCountry(String country) {
 		DROPDOWN.click();
 		for(WebElement el:COUNTRY_SELECTED) {
 			if(el.getText().equals(country))

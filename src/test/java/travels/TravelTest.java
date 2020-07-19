@@ -54,7 +54,7 @@ public class TravelTest {
 	public void fillMyProfilTest() {
 		this.login();
 		this.closeCookieMessage();
-		new Account(driver)
+		new AccountPage(driver)
 			.clickMyProfile()
 			.enterAddress1(prop.getProperty("address1"))
 			.enterAddress2(prop.getProperty("address2"))
@@ -68,7 +68,7 @@ public class TravelTest {
 	@Test(enabled = true, priority = 3)
 	public void buyTripTest() {
 		this.login();
-		new Account(driver)
+		new AccountPage(driver)
 			.clickHomeButton();
 		new SearchPanel(driver)
 			.clickToursTab()
