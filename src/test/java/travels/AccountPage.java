@@ -9,7 +9,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
-public class Account {
+public class AccountPage {
 	private WebDriver driver;
 	private Actions action;
 	@FindBy (css = "a[href='#profile'")

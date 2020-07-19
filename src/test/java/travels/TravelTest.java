@@ -33,7 +33,7 @@ public class TravelTest {
 	public void closeTest() {
 		driver.quit();
 	}
-	@Test(enabled = false, priority = 1)
+	@Test(enabled = true, priority = 1)
 	public void createAccount() {
 		new TravelsMainPage(driver)
 			.clickSignUpMenu();
@@ -65,7 +65,7 @@ public class TravelTest {
 			.clickSubmitButton();
 		
 	}
-	@Test(enabled = false, priority = 3)
+	@Test(enabled = true, priority = 3)
 	public void buyTripTest() {
 		this.login();
 		new Account(driver)
